@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .con {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(40, 46, 40);
+            display: flex;
+        }
+
+        .box {
+            margin: auto;
+            width: 400px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.411);
+            border-radius: 10px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand {
+            color: white;
+            font-size: 80px;
+            font-weight: 900;
+            margin: 20px auto;
+        }
+
+        .brand:hover {
+            transform: scale(1.1);
+            color: rgb(0, 255, 0);
+        }
+
+        .email,
+        .password {
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.111);
+            height: 30px;
+            margin: 10px 15px;
+            padding: 10px;
+            color: white;
+        }
+
+        .btn {
+            padding: 10px;
+            width: 150px;
+            margin: 10px auto;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .do {
+            color: grey;
+            margin: 10px auto;
+        }
+
+        .sing {
+            color: white;
+            font-size: 18px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box">
+            <div class="brand">Book Store</div>
+            <input class="email" type="email" name="email" id="email" placeholder="Email">
+            <input class="password" type="password" placeholder="Password"> 
+            <button class="btn">Log in</button>
+            <div class="do">Do not have an account</div>
+            <div class="sing">Sing up</div>
+        </div>
+    </div>
+
+    <script>
+        let redirect = document.getElementsByClassName("btn")[0]
+        redirect.addEventListener("click", () => {
+            window.location.href = "home.html";
+        })
+    </script>
+</body>
+
+</html>
