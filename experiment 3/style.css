@@ -1,0 +1,312 @@
+:root {
+    --displayn: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.con {
+    background-color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header {
+    height: 50px;
+    background-color: rgb(0, 255, 149);
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    gap: 20px;
+}
+
+.hamburgerbar {
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer
+}
+
+.hostel {
+    padding-top: 7px;
+}
+
+nav {
+    background-color: rgb(44, 44, 44);
+    width: 100vw;
+    height: var(--height);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+}
+
+.bottom {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(97, 97, 97, 0.196);
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    border: 0px;
+    border-radius: 8px;
+    display: flex;
+    gap: 2px;
+}
+
+.text {
+    display: var(--displayn);
+}
+
+
+header {
+    background-color: greenyellow;
+}
+
+.announce {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.membercard {
+    background-color: rgba(0, 0, 0, 0.285);
+    width: 320px;
+    height: 410px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cname {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.membercard img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.ename {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.acard {
+    width: 90vw;
+    background-color: rgba(151, 151, 151, 0.447);
+    margin: 0px 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.sender {
+    display: flex;
+    gap: 5px;
+    background-color: rgba(159, 170, 159, 0.89);
+    padding: 1px;
+    width: min(100px);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+.sendername {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 5px;
+
+}
+
+.circle img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.hbar {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.831);
+    height: calc(100vh - 100px);
+    display: none;
+    position: fixed;
+    z-index: 2;
+}
+
+.upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.himg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.sname {
+    color: rgb(72, 255, 0);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.vsection {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 22px;
+}
+
+.logout {
+    color: red;
+    position: fixed;
+    bottom: 80px;
+}
+
+.back {
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.bg {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-image: url("11b70426a4fa7317a418690b41360496.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bgcover {
+    background-color: rgba(255, 255, 255, 0.883);
+    width: 100vw;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+}
+
+.ai {
+    background-color: rgba(120, 119, 119, 0.493);
+    padding: 3px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.aipage {
+    background-color: rgb(131, 129, 129);
+    height: 400px;
+    width: 300px;
+    border-radius: 10px 10px 0 10px;
+    position: fixed;
+    right: 70px;
+    bottom: 140px;
+    display: none;
+}
+
+.welcome {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Z2aNt2hxxew9iNHU47cqaUnz3iwtl8YMBQ&s");
+     background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.welcomecover {
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeupper {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+ 
+}
+
+.welcomelower {
+    color:  rgb(72, 255, 0);
+    font-size: 55px;
+    font-weight: bolder;
+ 
+}
+
+.solved , .achievements , .bestsuggestions {
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.st1 , .at1 ,.bt1 {
+    font-size: 23px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.st2 , .at2 , .bt2{
+padding: 0 20px;
+padding-bottom: 5px;
+font-size: 18px;
+}
+
+.solved {
+    background-color: rgba(255, 166, 0, 0.514);
+}
+
+.bestsuggestions {
+    background-color: rgb(225, 223, 223);
+}
+
+.achievements {
+    background-color: rgba(2, 255, 2, 0.299);
+}
+
+.rating {
+    background-color: rgba(0, 140, 255, 0.315);
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rt1 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.rt2 {
+    font-size: 200px;
+    font-weight: bolder;
+    color: red;
+}
+
+.last {
+    margin-bottom: 60px;
+}
