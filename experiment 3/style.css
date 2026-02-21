@@ -258,6 +258,7 @@ header {
 }
 
 .solved , .achievements , .bestsuggestions {
+    background-color: rgba(128, 128, 128, 0.16);
     margin: 5px;
     border-radius: 10px;
 }
@@ -272,18 +273,6 @@ header {
 padding: 0 20px;
 padding-bottom: 5px;
 font-size: 18px;
-}
-
-.solved {
-    background-color: rgba(255, 166, 0, 0.514);
-}
-
-.bestsuggestions {
-    background-color: rgb(225, 223, 223);
-}
-
-.achievements {
-    background-color: rgba(2, 255, 2, 0.299);
 }
 
 .rating {
