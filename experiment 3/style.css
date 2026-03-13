@@ -189,6 +189,10 @@ header {
     padding-top: 10px;
 }
 
+.link {
+    color: blue;
+    font-size: 16px;
+}
 .bg {
     width: 100vw;
     height: calc(100vh - 50px);

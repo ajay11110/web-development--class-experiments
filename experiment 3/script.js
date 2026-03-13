@@ -71,7 +71,7 @@ if (page == "home") {
     })
 
     document.getElementsByClassName("logout")[0].addEventListener("click",() => {
-      window.location.href="login page.html"
+      window.location.href="index.html"
     })
 
     // for ai page
@@ -265,7 +265,7 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
 
 if (page == "singup") {
 document.getElementsByClassName("sing")[0].addEventListener("click", () => {
-  window.location.href="login page.html"
+  window.location.href="index.html"
 })
 
 document.getElementsByClassName("btn")[0].addEventListener("click", () => {

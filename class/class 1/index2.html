@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            background-color: rgb(52, 70, 52);
+            width: 100vw;
+            height: 100vw;
+            position: relative;
+        }
+
+        .start {
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 100px;
+            position: absolute;
+        }
+
+        .middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .input {
+            /* border: 2px solid black; */
+            background-color: rgba(128, 128, 128, 0.397);
+           
+        width: 400px;
+        height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="start">
+            <div class="logo"></div>
+           <div class="outer">
+             <div class="middle">
+                <div class="left">
+                    <div class="logo"></div>
+                    <div class="name n1">Name</div>
+                    <div class="name n2">Id</div>
+                    <div class="name n3">Mobile</div>
+                </div>
+
+                <div class="right">
+                    <div class="input i1">
+                        <input class="input type="text" name="" id="">
+                    </div>
+                    <div class="input i2">
+                        <input class="input type="text" name="" id="">
+                    </div>
+                    <div class="input i3">
+                        <input class="input type="text" name="" id="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button class="btn">submit</button>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>

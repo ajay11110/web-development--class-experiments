@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compare</title>
+
+</head>
+
+<body>
+
+    <h1 class="a"></h1>
+
+    <script>
+        let a = Number(prompt("enter first number"))
+        let b = Number(prompt("enter second number"))
+
+        if (a > b) {
+            document.getElementsByClassName("a")[0].innerText = `${a} is greater than ${b}`
+        }
+
+        else if (a < b) {
+            document.getElementsByClassName("a")[0].text = `${a} is smaller than ${b}`
+        }
+
+        else {
+            document.getElementsByClassName("a")[0].innerText = `${a} and ${b} are equal`
+        }
+
+    </script>
+</body>
+
+</html>

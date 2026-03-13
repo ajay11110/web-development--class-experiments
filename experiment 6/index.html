@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compare</title>
+    <style>
+        .text {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="text"></div>
+    <div class="text"></div>
+
+    <script>
+
+        let arr = []
+        let sum1 = 0
+        let sum2 = 0
+
+        for (let i = 1; i < 6; i++) {
+            let j = Number(prompt("enter number " + i))
+            arr.push(j)
+        }
+
+        for (let j = 0; j < 5; j++) {
+            sum1 = sum1 + arr[j]
+        }
+
+        let k = 0
+
+        while (k < 5) {
+            sum2 = sum2 + arr[k]
+            k++
+        }
+
+        document.getElementsByClassName("text")[0].innerHTML = `sum of all numbers using for loop is ${sum1}`
+        document.getElementsByClassName("text")[1].innerHTML = `sum of all numbers using while loop is ${sum2}`
+
+    </script>
+</body>
+
+</html>

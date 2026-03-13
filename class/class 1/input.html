@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .start {
+            background-color: black;
+            color: white;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .con {
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .left,
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .a {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start">
+        <div class="con">
+            <div class="a">
+                <div class="left">
+                    <label for="name">Name</label>
+                    <label for="id">Id</label>
+                    <label for="mobile">Mobile</label>
+                </div>
+
+                <div class="right">
+                    <input type="email" id="id">
+                    <input type="text" id="name">
+                    <input type="text" id="mobile">
+                </div>
+            </div>
+            <button type="submit">submit</button>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
