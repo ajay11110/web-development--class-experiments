@@ -1,99 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Experiment 3 - CSS Demo</title>
+  <style>
+    /* i. Different font and text styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
 
-        .con {
-            height: 100vh;
-            width: 100vw;
-            background-color: rgb(227, 241, 227);
-            display: flex;
-        }
+    h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      font-style: italic;
+      text-shadow: 2px 2px 5px #555;
+    }
 
-        .box {
-            margin: auto;
-            width: 400px;
-            height: 500px;
-            background-color: rgba(119, 118, 118, 0.411);
-            border-radius: 10px;
-            margin-top: 100px;
-            display: flex;
-            flex-direction: column;
-        }
+    .highlight {
+      font-weight: bold;
+      color: darkred;
+      text-decoration: underline;
+    }
 
-        .brand {
-            color: rgb(5, 5, 5);
-            font-size: 80px;
-            font-weight: 900;
-            margin: 20px 100px;
-        }
+    /* ii. Background image for page and element */
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
-        .brand:hover {
-            transform: scale(1.1);
-            color: rgb(0, 255, 0);
-        }
+    .layer-box {
+      background-image: url('element-bg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 20px;
+      margin: 30px auto;
+      width: 300px;
+      border: 2px solid #333;
+    }
 
-        .email,
-        .password {
-            border: 1px solid white;
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.111);
-            height: 30px;
-            margin: 10px 15px;
-            padding: 10px;
-            color: white;
-        }
+    /* iii. Styles for links */
+    a {
+      color: navy;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
 
-        .btn {
-            padding: 10px;
-            width: 150px;
-            margin: 10px auto;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 600;
-        }
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
 
-        .btn:hover {
-            transform: scale(1.05);
-            color: white;
-            background-color: black;
-            border: 1px solid white;
-        }
+    /* iv. Working with layers */
+    .layer-box {
+      position: relative;
+      z-index: 10; /* brings it above other elements */
+    }
 
-        .do {
-            color: grey;
-            margin: 10px auto;
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 1; 
+    }
 
-        .sing {
-            color: white;
-            font-size: 18px;
-            margin: 0px auto;
-        }
-    </style>
-</head>
-
-<body data-page="login">
-    <div class="con">
-        <div class="box">
-            <div class="brand">KKR Hostel</div>
-            <input class="email" type="email" name="email" id="email" placeholder="Email">
-            <input class="password" type="password" placeholder="Password">
-            <button class="btn">Log in</button>
-            <div class="do">Do not have an account</div>
-            <div class="sing">Sing up</div>
-        </div>
-    </div>
    
-    <script src="script.js"></script>
+    body {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Styled Page</h1>
+  
+  <p>This is a demonstration of <span class="highlight">CSS styling</span> with fonts, backgrounds, links, layers, and cursors.</p>
+  
+  <a href="https://www.google.com">Visit Example</a>
+  
+  <div class="layer-box">
+    <p>This box is layered above the background.</p>
+  </div>
 </body>
-
 </html>
