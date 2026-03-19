@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swip photo</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+
+        .class {
+            background-color: grey;
+            width: 100vw;
+            height: 100px;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start">
+        <div class="class 1 text">
+            photo 1
+        </div>
+        <div class="class 2 text">
+            photo 2
+        </div>
+        <div class="class 3 text">
+            photo 3
+        </div>
+    </div>
+
+   <script>
+
+    let i = 1;
+
+    setInterval(() => {
+
+        document.getElementsByClassName("1")[0].style.display = "none";
+        document.getElementsByClassName("2")[0].style.display = "none";
+        document.getElementsByClassName("3")[0].style.display = "none";
+
+        document.getElementsByClassName(`${i}`)[0].style.display = "block";
+
+        i++;
+
+        if (i > 3) {
+            i = 1;
+        }
+    }, 2000);
+</script>
+
+
+
+
+
+    </script>
+</body>
+
+</html>
