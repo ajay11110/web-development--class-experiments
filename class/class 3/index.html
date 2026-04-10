@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary edition</title>
+    <style>
+        .start {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .con {
+            background-color: rgb(197, 224, 202);
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            margin: auto auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .style {
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .btn {
+            width: 70px;
+            height: 30px;
+            background-color: rgb(1, 255, 17);
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
-  
+    <div class="start">
+        <div class="con">
+            <input class="style" type="text" name="input1" placeholder="Input binary code 1" id="input1">
+            <input class="style" type="text" name="input2" placeholder="Input binary code 2" id="input2">
+            <button id="btn" class="btn">add</button>
+            <input class="style" type="text" name="output" placeholder="output" id="output">
+
+        </div>
+    </div>
+    <script>
+
+        let btn = document.getElementById("btn")
+
+        function add() {
+            let value1 = document.getElementById("input1").value
+            let value2 = document.getElementById("input2").value
+            let result = (parseInt(value1, 2) + parseInt(value2, 2)).toString(2)
+            document.getElementById("output").value = (result)
+
+        }
+        btn.addEventListener("click", add)
+        // console.log(value1)
+    </script>
 </body>
+
 </html>

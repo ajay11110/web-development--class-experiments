@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee salary range</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .start {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .con {
+            background-color: rgba(143, 141, 141, 0.603);
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .inputbox {
+            width: 500px;
+            height: 10px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .result {
+            background-color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #btn {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start">
+        <div class="con">
+            <div class="input">
+            </div>
+            <div>
+                <button id="btn">show ranges</button>
+            </div>
+            <div class="result">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let a = prompt("enter number of employees")
+        let emp = Number(a)
+        let btn = document.getElementById("btn")
+        let input = document.getElementsByClassName("input")[0]
+        let arr = []
+        let result = []
+        let resultbox = document.getElementsByClassName("result")[0]
+
+        for (let i = 0; i < emp; i++) {
+            input.innerHTML = input.innerHTML + `<input class="inputbox" type="text" placeholder = "Sell of enmployee ${i + 1}"name="input" id=${i}>`
+        }
+
+        async function add() {
+            return new Promise((resolve, reject) => {
+                for (let i = 0; i < emp; i++) {
+                    let inputbox = document.getElementById(i).value
+                    arr.push(200 + ((Number(inputbox) * 9) / 100))
+                }
+
+                for (let i = 0; i < 9; i++) {
+                    result.push(0)
+                }
+
+                resolve();
+            })
+        }
+
+        async function range() {
+            await add();
+            return new Promise((resolve, reject) => {
+
+
+                console.log(arr);
+
+
+
+                for (let i = 0; i < emp; i++) {
+                    if (arr[i] > 200 && arr[i] <= 300) {
+                        result[0]++
+                    }
+
+                    if (arr[i] > 300 && arr[i] <= 400) {
+                        result[1]++
+                    }
+
+                    if (arr[i] > 400 && arr[i] <= 500) {
+                        result[2]++
+                    }
+
+                    if (arr[i] > 500 && arr[i] <= 600) {
+                        result[3]++
+                    }
+
+                    if (arr[i] > 600 && arr[i] <= 700) {
+                        result[4]++
+                    }
+
+                    if (arr[i] > 700 && arr[i] <= 800) {
+                        result[5]++
+                    }
+
+                    if (arr[i] > 800 && arr[i] <= 900) {
+                        result[6]++
+                    }
+
+                    if (arr[i] > 900 && arr[i] <= 1000) {
+                        result[7]++
+                    }
+
+                    if (arr[i] > 1000) {
+                        result[8]++
+                    }
+
+                }
+
+                resolve()
+
+            })
+
+        }
+
+        async function print() {
+            await range();
+
+            let start = 200
+            let end = 300
+
+            for (let i = 0; i < 9; i++) {
+
+                if (i < 8) {
+                    resultbox.innerHTML = resultbox.innerHTML + `<div>${i+1}. there are ${result[i]} employees with salary between ${start} to ${end}</div>`
+                    start += 100
+                    end += 100
+                }
+
+                else {
+                    resultbox.innerHTML = resultbox.innerHTML + `<div>${i+1}. there are ${result[i]} employees with salary more than ${start}</div>`
+                }
+            }
+
+            console.log(result);
+        }
+
+        btn.addEventListener("click", print)
+    </script>
+</body>
+
+</html>
