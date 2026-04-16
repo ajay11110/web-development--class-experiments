@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        form{ border: 2px solid black; width: 500px; text-align: center; padding: 4px; margin: auto; justify-content: center;}
+    </style>
+</head>
+<body>
+    <form onsubmit="details()">
+        <h1>Registration Page</h1>
+        <div>Name: <input type="text" id="name"></div><br>
+        <div>Email: <input type="email" id="mail"></div><br>
+        <div>Password: <input type="password" id="pass"></div><br>
+        <div>Confirm: <input type="password" id ="confirm"></div><br>
+        <div>Phone no.: <input type ="tel" id ="number"></div><br>
+        <div> <input type = "submit" value="Register"></div>
+    </form>
+    <script>
+        function details(){
+            var namePattern = /^[A-Za-z]/;
+            var emailPattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+            var numberpattern = /^[6-9]\d{9}$/;
+
+        var a = document.getElementById("name").value;
+        var b = document.getElementById("mail").value;
+        var c = document.getElementById("pass").value;
+        var d = document.getElementById("confirm").value;
+        var e = document.getElementById("number").value;
+        if(a == "" || b == "" || c == "" || d == "" || e == ""){
+            alert("Please fill all the details");
+            return false;
+        }
+       else if(!namePattern.test(a)){
+    alert("Please enter proper name(alphabets only)");
+    return false;
+}
+else if(!emailPattern.test(b)){
+    alert("Enter proper email");
+    return false;
+}
+else if( c != d){
+    alert("Enter same password");
+    return false;
+}
+else if(!numberpattern.test(e)){
+    alert("Please enter a valid 10-digit phone number starting with 6–9");
+    return false;
+}}
+    </script>
+</body>
+</html>
